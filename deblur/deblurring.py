@@ -45,7 +45,7 @@ def get_sequences(input_seqs):
     """
     try:
         seqs = [Sequence(id, seq) for id, seq in input_seqs]
-    except Exception:
+    except Exception:  # noqa
         seqs = []
 
     if len(seqs) == 0:

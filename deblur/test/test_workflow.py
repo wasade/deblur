@@ -8,7 +8,7 @@
 
 from unittest import TestCase, main
 from shutil import rmtree
-from tempfile import mkdtemp, NamedTemporaryFile
+from tempfile import mkdtemp
 from os import listdir, remove
 from types import GeneratorType
 from os.path import join, isfile, abspath, dirname, splitext
@@ -219,8 +219,8 @@ class workflowTests(TestCase):
                  ">Seq2\nAAAAGCcA\n"
                  ">Seq3\nAAGTGCAA\n")
         fasta_exp = (">Seq1\nAAGTTTCA\n"
-                 ">Seq2\nAAAAGCCA\n"
-                 ">Seq3\nAAGTGCAA\n")
+                     ">Seq2\nAAAAGCCA\n"
+                     ">Seq3\nAAGTGCAA\n")
 
         in_fa = join(self.working_dir, "seqs_lower.fasta")
 
@@ -583,7 +583,7 @@ class workflowTests(TestCase):
                                   "CACGCCTAACGTGCGGGTCCGGCGGAAACTGCGTGGCTTG"
                                   "GGACCGGAAGACTCGAGGGGTACGTCAGGG")]
         names_non_chimera = ["s1_1;size=9;", "s1_20;size=9;",
-                            "s1_40;size=8;", "s1_60;size=8;"]
+                             "s1_40;size=8;", "s1_60;size=8;"]
         seqs_non_chimera = [("TACCCGCAGCTCAAGTGGTGGTCGCTATTATTGAGCCTAAA"
                              "ACGTCCGTAGTCGGCTTTGTAAATCCCTGGGTAAATCGGGT"
                              "CGCTTAACGATCCGATTCTGGGGAGACTGCAAAGCTTGGGA"
